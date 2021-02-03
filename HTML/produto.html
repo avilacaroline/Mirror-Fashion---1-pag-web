@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mirror Fashion</title>
+
+    <link rel="stylesheet" href="CSS/reset.css">
+    <link rel="stylesheet" href="CSS/produto.css">
+    <script type="text/javascript" src="../Primeiro Projeto - Mirror Fashion/JS/produto.js"></script>
+</head>
+<body>
+    <header class="main-header">
+        <h1>
+            <img class="logo" src="img/logo.png" alt="Logo da Mirror Fashion">
+        </h1>
+
+        
+        <p class="sacola">
+            Nenhum item na sacola de compras
+        </p>
+
+        <nav class="menu">
+
+            <a class="action" href="#">Sua Conta</a>
+            <a class="action" href="#">Lista de desejos</a>
+            <a class="action" href="#">Cartão fidelidade</a>
+            <a class="action" href="sobre.html">Sobre</a>
+            <a class="action" href="#">Ajuda</a>
+        
+        </nav>
+    </header>
+
+    <div class="product">
+            <h1>Fuzzy Cardigan</h1>
+            <p class="firstp">Por apenas R$129,90</p>
+
+            <div class="details">
+                <h2>Detalhes do produto:</h2>
+                <p class="secondp">Esse é o melhor casaco de Cardigã que você já viu. 
+                    Excelente material italiano com estampa desenhada pelos artesãos da
+                    comunidade de Krotor nas ilhas gregas. Compre já e receba hoje mesmo pela nossa entrega a jato.
+                </p>
+            </div>
+
+            <form>
+                <fieldset class="color-ball">
+                    <legend>Escolha a cor: </legend>
+                
+
+                    <input class="input" type="radio" name="color" id="green" checked>
+                    <label class="ball" for="green">   
+                        <!--aqui seria criado o before-->                 
+                        <img class="photo" src="img/produtos/foto1-verde.png" alt="Produto na cor verde">
+                        <!--Aqui seria criado o after-->
+                    </label>
+                    
+                    <input class="input" type="radio" name="color" id="pink">  
+                    <label class="ball" for="pink">                                      
+                        <img class="photo" src="img/produtos/foto1-rosa.png" alt="Produto na cor rosa">
+                    </label>
+                    
+                    <input class="input" type="radio" name="color" id="blue">
+                    <label class="ball" for="blue">                
+                        <img class="photo" src="img/produtos/foto1-azul.png" alt="Produto na cor azul">
+                    </label>
+                </fieldset>
+
+                <fieldset class="tamanhos">
+                    <legend>Escolha o tamanho:</legend>
+                    <input type="range" min="36" max="46" value="42" step="2" name="tamanho" id="tamanho">4
+                    <output for="tamanho" name="valortamanho">42</output>
+                </fieldset>
+
+                <button class="buy">Comprar</button>
+            </form>
+        </div>
+    
+
+    <footer>
+        <div class="container">
+            <img src="img/logo-rodape.png" alt="Logo Mirror Fashion">
+
+            <ul class="social">
+                <li><a href="http://facebook.com/mirrorfashion">Facebook</a></li>
+                <li><a href="http://twitter.com/mirrorfashion">Twitter</a></a></li>
+                <li><a href="http://plus.google.com/mirrorfashion">Google+</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

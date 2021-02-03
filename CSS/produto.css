@@ -1,0 +1,325 @@
+body {
+    min-width: 320px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+
+.main-header {
+    padding: 10px 20px 20px ;
+    text-align: center;
+}
+
+.main-header h1 img {
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+.main-header .sacola{
+    display: none;
+}
+
+.main-header .action {
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 10px;
+    padding-right: 10px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.product{
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    padding-left: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.product h1 { 
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.product p {
+    font-size: 15px;
+    font-style: italic;
+    margin-bottom: 1em;
+}
+
+.product legend {
+    display: block;
+    font: bold 0.9em/2.5 Arial;
+    text-transform: uppercase;
+}
+
+.color-ball   {
+    position: relative ;
+   
+}
+
+.color-ball > .ball::before { /*poderia ser color-ball:before, ver HTML para ver onde cada qual é criado*/
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+     
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    
+    cursor: pointer;
+
+    top: 0;
+
+    border:6px solid rgba(0,0,0,0);transition:1s;
+}
+
+.color-ball > .ball[for="green"]::before {
+    background-color: #33cc66;
+}
+
+.color-ball > .ball[for="pink"]::before {
+    background-color: rgb(255, 102, 102);
+    left: 50px;
+}
+
+.color-ball > .ball[for="blue"]::before {
+    background-color: #6666ff;
+    left: 100px;
+}
+
+.color-ball > .input {
+    display: none;
+}
+
+.color-ball > .input:checked + .ball::before {
+    border: 3px solid rgba(0, 0, 0, 0.3);
+}
+
+.color-ball .photo {
+    display: none;
+    padding-top: 55px;
+    box-sizing: border-box;
+
+   max-width: 424px;
+}
+
+.color-ball > .input:checked + .ball > .photo {
+    display: block;
+}
+
+.buy {
+    background-color: #bfc4b5;
+    border: none;
+    color: #333;   
+    
+
+    font-size: 18px;
+    text-transform: uppercase;
+
+    box-shadow: 0 1px 3px #777;
+
+    display: block;
+    padding: 0.5em 1em;
+    margin: 1em auto;
+    
+    cursor: pointer;
+
+}
+
+.tamanhos output {
+    display: inline-block;
+    height:44px;
+    width:44px;
+
+    line-height:44px;
+    text-align: center;
+    border:3px solid #666;
+    border-radius:50%;color:#555; 
+}
+
+.buy:active {
+    transform: translateY(2px) scale(0.99);
+}
+
+footer {
+    background-image: url(../img/fundo-rodape.png);
+    padding: 15px;
+    margin-top: 15px;
+  
+    
+}
+
+footer .social{
+    display: flex;
+    float: right;
+    
+}
+
+footer a {
+    display: block;
+    width: 32px;
+    height: 32px;
+    text-indent: -99999px;
+    margin-left: 10px;
+}
+
+footer  ul [href*="facebook"]{
+    background-image: url(../img/facebook.png);
+    background-repeat: no-repeat;
+}
+
+footer ul [href*="twitter"]{
+    background-image: url(../img/twitter.png);
+    background-repeat: no-repeat;
+}
+
+footer ul [href*="plus"]{
+    background-image: url(../img/googleplus.png);
+    background-repeat: no-repeat;
+}
+
+
+
+@media (min-width: 450px){
+    .product {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+@media (min-width: 840px) {
+    .main-header{
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .main-header > .menu {
+        align-self: flex-end;
+    }
+
+    .main-header > .sacola {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+
+        background-image: url(../img/sacola.png);
+        background-repeat: no-repeat;
+        width: 190px;
+        background-position: right center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-right: 35px;
+        margin-right: 15px;
+        text-align: center;
+    }
+
+    .product {
+        max-width: 1200px;
+        margin-left: 10px;
+        margin-right: 10px;
+        display: block;
+        padding-top: 20px;
+        
+    }
+  
+    .product h1{
+        text-align: left;
+        position: absolute;
+        left: 400px;
+    }
+
+    .product  .firstp {
+        position: absolute;
+        left: 400px;
+        top: 180px; 
+
+    }
+
+    .product h2{
+        text-align: left;
+        position: absolute;
+        left: 400px;
+        top: 200px;
+    }
+
+    .product .secondp {
+        position: absolute;
+        left: 400px;
+        top: 220px; 
+        padding-right: 15px;
+
+        font-size: 15px;
+        
+
+    }
+
+    .color-ball {
+        position: static;            
+    }
+
+    .color-ball legend  {
+        position: absolute;
+        top: 260px;
+        left: 400px;  
+    }
+   
+
+    .color-ball > .ball::before {
+        position: static;
+        display: inline-block;
+        margin-top: 180px;
+        margin-left: 16px;
+        
+    }
+    
+    .color-ball > .ball[for="pink"]::before {
+        background-color: rgb(255, 102, 102);
+        left: 70px;
+    
+    }
+    
+    .color-ball > .ball[for="blue"]::before {
+        background-color: #6666ff;
+        left: 120px;
+    }
+
+
+    .color-ball .photo {
+        float: left;
+        margin-right: 20px  ;
+        padding-top: 0px;  
+    }
+
+    .tamanhos {
+        position: absolute;
+        left: 400px;
+        top: 360px;
+    }
+
+    .buy {
+        position: absolute;
+        left: 400px;
+        top: 420px;
+    }
+
+}
+
+@media (min-width:1262px) {
+    .product {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
